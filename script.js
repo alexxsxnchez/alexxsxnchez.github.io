@@ -11,8 +11,20 @@ $(document).ready(function() {
 	
 	}*/
 	
-	
 	);
-
+	$(window).scroll(function() { 
+	
+		if($(window).scrollTop() > 542) { //541
+			$(".header").css("top", "74%");
+			$(".header").css("position", "absolute");
+			$(".header").css("z-index", 0);
+			
+		} else {
+			$(".header").css("top", 0);
+			$(".header").css("position", "fixed");
+			$(".header").css("z-index", -1);
+		}
+	
+	});
 
 });
